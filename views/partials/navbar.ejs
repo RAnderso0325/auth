@@ -1,0 +1,25 @@
+
+<nav>
+	<div class="nav-wrapper">
+		<div class="row">
+			<a href="/" class="brand-logo">RJA</a>
+			<a href="/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			<ul class="right hide-on-med-and-down">
+				<% if(!currentUser){%>
+					<li><a href="/auth/login">Login</a></li>
+					<li><a href="/auth/signup">SignUp</a></li>
+				<%}else{%>
+					<li><a href="/auth/logout">Logout</a></li>
+				<%}%>	
+			</ul>
+			<ul class="side-nav collapsible" id="mobile-demo">
+				<% if(!currentUser){%>
+					<li><a href="/auth/login">Login</a></li>
+					<li><a href="/auth/signup">SignUp</a></li>
+				<%}else{%>
+					<li><a href="/auth/logout">Logout</a></li>
+				<%}%>	
+			</ul>
+		</div>
+	</div>
+</nav>
